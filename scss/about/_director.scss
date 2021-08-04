@@ -1,0 +1,146 @@
+.director {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  background-color: #012F34;
+  margin-bottom: 76px;
+  padding: 128px 0 56px 0;
+  animation: pastga .6s ease forwards;
+
+  &::before {
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    display: block;
+    width: 96px;
+    height: 96px;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.director--nikita::before {
+  background-image: url("../img/nikita.png");
+}
+
+.director--cristian::before {
+  background-image: url("../img/kristian.png");
+}
+
+.director--kruz::before {
+  background-image: url("../img/kruz.png");
+}
+
+.director--drake::before {
+  background-image: url("../img/drake.png");
+}
+
+.director--griffin::before {
+  background-image: url("../img/griffin.png");
+}
+
+.director--aden::before {
+  background-image: url("../img/kristian.png");
+}
+
+.director__btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -26px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.director__social-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  display: none;
+}
+.director__social-item {
+  margin-right: 16px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+
+.director__btn--open {
+  background-color: #F67E7E;
+  background-image: url("../img/plus.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.director__blockquote {
+  display: none;
+}
+
+.director__btn--close {
+  background-color: #79C8C7;
+  background-image: url("../img/x.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.director__name {
+  color: #79C8C7;
+}
+
+.director__profession {
+  font-style: italic;
+}
+
+.director--open {
+  padding: 14px 0 56px 0;
+  animation: tepaga .6s ease forwards;
+
+  &::before {
+    display: none;
+  }
+}
+
+.director--open .director__blockquote {
+  display: block;
+}
+
+.director--open .director__social-list {
+  display: flex;
+}
+
+@keyframes tepaga {
+  from{
+    opacity: 0;
+    transform: translateY(25%);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pastga {
+  from{
+    opacity: 0;
+    transform: translateY(-25%);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
